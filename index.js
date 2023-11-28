@@ -4,6 +4,7 @@ import cors from "cors";
 import database from "./database.js";
 
 const app = express();
+const port =process.env.PORT || 5000;
 
 /* To handle the HTTP Methods Body Parser is used, Generally used to extract the entire body portion of an incoming request stream and exposes it on req.body
  */
@@ -61,7 +62,6 @@ app.delete("/remove/:id", (req, res) => {
     }
   });
   
-let port = 5000;
 
 app.listen(port, () => {
   console.log(`Port is running at ${port}`);
